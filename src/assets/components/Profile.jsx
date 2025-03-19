@@ -41,19 +41,22 @@ const Profile = () => {
   ];
 
   return (
-    <section id="profile" className="mt-10 lg:mt-[212px] lg:translate-y-[108px]">
+    <section
+      id="profile"
+      className="mt-10 lg:mt-[212px] lg:translate-y-[108px]"
+    >
       <div className="container">
         <div className="profileShadow rounded-2xl p-4 lg:p-28 bg-gray-white grid lg:grid-cols-2 gap-16 lg:gap-[136px] items-center">
           <div className="profileImage relative">
             <img
               src="/public/images/profile.png"
-              className="w-[90%] mx-auto lg:w-full"
+              className="w-[90%] mx-auto lg:w-full pt-1.5 lg:pt-0"
               alt=""
             />
-            <div className="flex w-full max-w-[264px] small-socialShadow lg:socialShadow bg-gray-white justify-center items-center p-3 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-sm">
+            <div className="flex w-full max-w-[250px] lg:max-w-[264px] p-2 lg:p-3 small-socialShadow lg:socialShadow bg-gray-white justify-center items-center absolute left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-sm">
               {socialLinks.map((link) => (
                 <a
-                  className="w-12 h-12 rounded-sm text-primary-500 grid place-items-center font-medium text-lg hover:bg-primary-500 hover:text-gray-white transition-colors duration-200"
+                  className="w-10 lg:w-12 h-10 lg:h-12 rounded-sm text-primary-500 grid place-items-center font-medium lg:text-lg hover:bg-primary-500 hover:text-gray-white transition-colors duration-200"
                   key={link.id}
                   href={link.url}
                 >
@@ -63,7 +66,9 @@ const Profile = () => {
             </div>
           </div>
           <div className="profileContent">
-            <Heading>I am Professional User Experience Designer</Heading>
+            <Heading className="!lg:text-[38px] leading-[132%]">
+              I am Professional User Experience Designer
+            </Heading>
             <Paragraph className="mt-5 lg:mt-8 mb-3 lg:mb-4">
               I design and develop services for customers specializing creating
               stylish, modern websites, web services and online stores. My
@@ -73,7 +78,7 @@ const Profile = () => {
               I design and develop services for customers specializing creating
               stylish, modern websites, web services.
             </Paragraph>
-            <div className="flex gap-4">
+            <div className="flex gap-4 pb-3 lg:pb-0">
               <Button>My Project</Button>
               <Button className="!flex items-center gap-3 bg-transparent text-primary-500 outline-2 outline-primary-500">
                 <LuDownload />
