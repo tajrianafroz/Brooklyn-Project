@@ -43,7 +43,7 @@ const Profile = () => {
   return (
     <section
       id="profile"
-      className="mt-10 lg:mt-[212px] lg:translate-y-[108px]"
+      className="mt-10 lg:mt-[90px] lg:translate-y-[108px]"
     >
       <div className="container">
         <div className="profileShadow rounded-2xl p-4 lg:p-28 bg-gray-white grid lg:grid-cols-2 gap-16 lg:gap-[136px] items-center">

@@ -3,6 +3,8 @@ import Heading from "./utils/Heading";
 import Paragraph from "./utils/Paragraph";
 import Button from "./utils/Button";
 import WhatDoCards from './utils/WhatDoCards';
+import { Link, Outlet } from "react-router";
+import TestimonialBox from './utils/TestimonialBox';
 
 const WhatIDo = () => {
   return (

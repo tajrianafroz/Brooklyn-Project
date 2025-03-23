@@ -38,15 +38,15 @@ const Footer = () => {
   return (
     <section
       id="footer"
-      className="bg-gray-800 pt-[80px] lg:pt-[160px] pb-[30px] lg:pb-[50px]"
+      className="bg-gray-800 pt-[10px] lg:pt-[160px] pb-[30px] lg:pb-[50px]"
     >
-      <div className="container grid grid-cols-2 lg:grid-cols-3 items-center">
-        <div className="logo">
+      <div className="container grid lg:grid-cols-3 items-center">
+        <div className="logo my-5 lg:my-0">
           <a href="#">
-            <img src="/public/images/footerLogo.png" className="max-w-full" alt="" />
+            <img src="/public/images/footerLogo.png" className="max-w-[40%] lg:max-w-full" alt="" />
           </a>
         </div>
-        <div>
+        <div className="hidden lg:block">
           <ul
             className={`${
               !toggle ? "scale-x-0" : ""
@@ -64,8 +64,8 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-        <div className="copyright text-end">
-          <p className="leading-[150%] text-gray-white">
+        <div className="copyright text-start lg:text-end py-4 lg:py-0">
+          <p className="leading-[150%] text-gray-white text-sm lg:text-[16px]">
             Copyright © 2022 Picto.
           </p>
         </div>

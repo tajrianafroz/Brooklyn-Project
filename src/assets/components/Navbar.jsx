@@ -2,32 +2,33 @@ import React, { useState } from "react";
 import Button from "./utils/Button";
 import { MdOutlineMenu } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   const menuLinks = [
     {
       title: "Home",
-      url: "",
+      url: "/",
     },
     {
       title: "About",
-      url: "",
+      url: "/about",
     },
     {
       title: "Process",
-      url: "",
+      url: "/workprocess",
     },
     {
       title: "Portfolio",
-      url: "",
+      url: "/portfolio",
     },
     {
       title: "Blog",
-      url: "",
+      url: "/blog",
     },
     {
       title: "Services",
-      url: "",
+      url: "/services",
     },
   ];
 
@@ -37,9 +38,9 @@ const Navbar = () => {
     <nav className="py-5 bg-gray-white relative z-10">
       <div className="container grid grid-cols-2 lg:grid-cols-3 items-center">
         <div className="logo">
-          <a href="#">
+          <Link to="/">
             <img src="/public/images/logo.png" className="max-w-full" alt="" />
-          </a>
+          </Link>
         </div>
         <div
           onClick={() => setToggle(false)}
@@ -47,7 +48,7 @@ const Navbar = () => {
             !toggle ? "invisible opacity-0" : "visible opacity-100"
           } transition-all duration-300 lg:visible lg:opacity-100 col-span-2 lg:block fixed lg:static inset-0 bg-gray-500/70 lg:bg-transparent`}
         >
-          <ul
+          <ul id="navbar"
             className={`${
               !toggle ? "scale-x-0" : ""
             } menuItems origin-left transition-all duration-400 lg:scale-x-100 lg:flex justify-end items-center relative gap-12 bg-gray-white lg:bg-transparent h-full lg:h-auto max-w-3/4 lg:max-w-full p-7 lg:p-0`}
@@ -60,12 +61,12 @@ const Navbar = () => {
             </button>
             {menuLinks.map((link, index) => (
               <li key={index}>
-                <a
+                <NavLink
                   className="font-medium leading-[150%] text-[#333] inline-block my-2 lg:my-0"
-                  href={link.url}
+                  to={link.url}
                 >
                   {link.title}
-                </a>
+                </NavLink>
               </li>
             ))}
             <li className="mt-3 lg:mt-0">
