@@ -8,6 +8,13 @@ import DiscussInfoCards from "./utils/DiscussInfoCards";
 import { GrLocation } from "react-icons/gr";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { IoIosCall } from "react-icons/io";
+import {
+  FaFacebookF,
+  FaDribbble,
+  FaInstagram,
+  FaLinkedinIn,
+  FaBehance,
+} from "react-icons/fa6";
 
 const Discuss = () => {
   const [loading, setLoading] = useState(true);
@@ -34,11 +41,39 @@ const Discuss = () => {
       );
   };
 
+  const socialLinks = [
+      {
+        id: 1,
+        url: "#",
+        icon: <FaFacebookF />,
+      },
+      {
+        id: 2,
+        url: "#",
+        icon: <FaDribbble />,
+      },
+      {
+        id: 3,
+        url: "#",
+        icon: <FaInstagram />,
+      },
+      {
+        id: 4,
+        url: "#",
+        icon: <FaLinkedinIn />,
+      },
+      {
+        id: 5,
+        url: "#",
+        icon: <FaBehance />,
+      },
+    ];
+
   return (
     <section id="discuss" className="my-10 lg:translate-y-[110px]">
       <div className="container">
         <div className="discuss-Shadow rounded-[15px] p-4 lg:p-22 bg-gray-white grid lg:grid-cols-2 gap-3 lg:gap-[103px] items-center">
-          <div className="discussContent pb-2 lg:pb-9">
+          <div className="discussContent pb-2 lg:pb-0">
             <h2 className="text-[28px] lg:text-[38px] leading-[132%] font-semibold text-gray-900">
               Let’s discuss your Project
             </h2>
@@ -46,10 +81,21 @@ const Discuss = () => {
               There are many variations of passages of Lorem Ipsu available. but
               the majority have suffered alte.
             </Paragraph>
-            <div className="discussInfo">
+            <div className="discussInfo mt-5 lg:mt-[35px] grid gap-[13px]">
               <DiscussInfoCards />
               <DiscussInfoCards />
               <DiscussInfoCards />
+            </div>
+            <div className="discussLinks mt-4 lg:mt-6 flex w-full max-w-[250px] lg:max-w-[264px] bg-gray-white justify-center items-center">
+              {socialLinks.map((link) => (
+                <a
+                  className="w-10 lg:w-12 h-10 lg:h-12 rounded-sm text-primary-500 grid place-items-center font-medium lg:text-lg hover:bg-primary-500 hover:text-gray-white transition-colors duration-200"
+                  key={link.id}
+                  href={link.url}
+                >
+                  {link.icon}
+                </a>
+              ))}
             </div>
           </div>
           <div className="discussForm">

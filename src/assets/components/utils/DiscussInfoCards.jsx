@@ -42,7 +42,7 @@ const DiscussInfoCards = () => {
     //     <h4 className="text-gray-900 leading-[150%] font-medium">{info}</h4>
     //   </div>
     // </div>
-    <div className="grid grid-cols-2 gap-[13px] bg-gray-white p-3 lg:p-6">
+    <div className="grid grid-cols-2 rounded-[10px] bg-gray-white p-3 lg:p-6 shadow">
       <div className="cardIcon w-1/3">
         <a
           className="inline-block w-full max-w-[24px] h-full max-h-[24px] rounded-1 bg-[#EDD8FF] text-primary-500 focus:bg-primary-500 focus:text-gray-white"
